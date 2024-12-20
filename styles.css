@@ -1,0 +1,212 @@
+/* Given stylings */
+:root {
+  /* colors */
+  --clr-violet: hsl(257, 40%, 49%);
+  --clr-magenta: hsl(300, 69%, 71%);
+
+  /* font weights */
+  --fw-med: 400;
+  --fw-bold: 600;
+
+  /* fonts */
+  --font-poppins: "Poppins", sans-serif;
+  --font-openSans: "Open Sans", sans-serif;
+}
+
+/* CSS reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--clr-violet);
+  color: white;
+  background-image: url(images/bg-mobile.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  font-family: var(--font-poppins);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+  min-height: 1600px;
+  padding: 5rem 4rem;
+}
+
+h1 {
+  font-size: 3.5rem;
+  font-weight: var(--fw-bold);
+  margin-bottom: 2rem;
+}
+
+p {
+  font-family: var(--font-openSans);
+  font-size: 2rem;
+  font-weight: var(--fw-med);
+  margin-bottom: 3rem;
+  line-height: 3rem;
+}
+
+button {
+   padding: 1.5rem 9rem;
+   border-radius: 5rem;
+   border: none;
+   color: var(--clr-violet);
+   font: var(--font-openSans);
+   font-weight: var(--fw-med);
+   box-shadow: rgb(38, 57, 77) 0px 10px 20px -10px;
+   margin-bottom: 7rem;
+}
+
+button:hover{
+  background-color: var(--clr-magenta);
+  color: white;
+  transition: .15s ease-in-out;
+  cursor: pointer;
+}
+
+i {
+  width: 4rem;
+  height: 4rem;
+  margin: 1rem;
+  border: 2px solid white;
+  border-radius: 50%;
+  padding: 1rem;
+  font-size: 2rem;
+}
+
+i:hover {
+  color: var(--clr-magenta);
+  border: 2px solid var(--clr-magenta);
+  transition: .15s ease-in-out;
+  cursor: pointer;
+}
+
+p,
+h1,
+.btn,
+.imgContainer,
+.socials {
+  text-align: center;
+}
+
+.btn {
+  font-size: 1.5rem;
+}
+
+.innerContent {
+  padding: 0rem .25rem;
+}
+
+.imgContainer img {
+  max-width: 100%; 
+}
+
+.logoContainer img {
+  max-width: 50%;
+  margin-bottom: 3rem;
+}
+
+@media (max-width: 600px) {
+  .logoContainer img {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 1440px){
+  body {
+    background-image: url(images/bg-desktop.svg);
+    background-size: contain;
+  }
+  
+  main {
+    flex-direction: row;
+    min-height: 97vh;
+    gap: 4rem;
+  }
+
+  footer {
+    align-self: end;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.25rem;
+    margin-right: 2rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    margin-bottom: 1.5rem;
+    margin-right: 0rem;
+  }
+
+  button {
+    padding: 1rem 4.5rem;
+    margin-bottom: 9rem;
+  }
+
+  i {
+    width: 3rem;
+    height: 3rem;
+    margin: .75rem;
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: .75rem;
+    font-size: 1.25rem;
+  }
+
+  p, h1, .btn {
+    text-align: left;
+  }
+
+  .btn{
+    align-self: start;
+    font-size: 1.25rem;
+  }
+
+  .innerContent, .imgContent {
+    display: flex;
+    flex-direction: column;
+    max-height: 97vh;
+  }
+
+  .innerContent {
+    width: 45%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10rem;
+  }
+
+  .imgContent {
+    width: 55%;
+  }
+
+  .socials {
+    align-self: end;
+}
+
+  .imgContainer img {
+    width: 100%;
+    margin-top: 0rem;
+  }
+}
+
+/* pre-included attribution css moved from index <style> */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-bottom: 0;
+}
+.attribution a {
+  color: hsl(228, 53%, 79%);
+}
